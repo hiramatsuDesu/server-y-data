@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card shadow-lg">
+        <div class="card-header">
+            <h1>Tabla de Películas...</h1>
+            <div><a href="/shows/add" class="btn btn-lg btn-outline-primary">
+                Agregar
+            </a></div>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Título</th>
+                    <th>Año</th>
+                    <th>Género</th>
+                    <th>Comandos</th>
+                </thead>
+                <tbody>
+                    {{#each tvshows}}
+                    <tr>
+                        <td>{{this.title}}</td>
+                        <td>{{this.year}}</td>
+                        <td>{{this.genre}}</td>
+                        <td><a href='/shows/edit/{{this._id}}'>Editar</a> | <a href='/shows/delete/{{this._id}}'>Eliminar</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
